@@ -1,4 +1,4 @@
 # LinkedGraph
 Discrete math project
 
-^_^
+Group of Isa, Beksultan, Isa 
