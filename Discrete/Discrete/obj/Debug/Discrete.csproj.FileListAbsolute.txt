@@ -8,3 +8,13 @@ D:\Projects\Discrete\Discrete\obj\Debug\Discrete.csproj.GenerateResource.Cache
 D:\Projects\Discrete\Discrete\obj\Debug\Discrete.csproj.CoreCompileInputs.cache
 D:\Projects\Discrete\Discrete\obj\Debug\Discrete.exe
 D:\Projects\Discrete\Discrete\obj\Debug\Discrete.pdb
+C:\Discrete\LinkedGraph\Discrete\Discrete\bin\Debug\Discrete.exe.config
+C:\Discrete\LinkedGraph\Discrete\Discrete\bin\Debug\Discrete.exe
+C:\Discrete\LinkedGraph\Discrete\Discrete\bin\Debug\Discrete.pdb
+C:\Discrete\LinkedGraph\Discrete\Discrete\obj\Debug\Discrete.csprojResolveAssemblyReference.cache
+C:\Discrete\LinkedGraph\Discrete\Discrete\obj\Debug\Discrete.Form1.resources
+C:\Discrete\LinkedGraph\Discrete\Discrete\obj\Debug\Discrete.Properties.Resources.resources
+C:\Discrete\LinkedGraph\Discrete\Discrete\obj\Debug\Discrete.csproj.GenerateResource.Cache
+C:\Discrete\LinkedGraph\Discrete\Discrete\obj\Debug\Discrete.csproj.CoreCompileInputs.cache
+C:\Discrete\LinkedGraph\Discrete\Discrete\obj\Debug\Discrete.exe
+C:\Discrete\LinkedGraph\Discrete\Discrete\obj\Debug\Discrete.pdb
