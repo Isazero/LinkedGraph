@@ -60,6 +60,7 @@ namespace Discrete
             this.textBox24 = new System.Windows.Forms.TextBox();
             this.textBox25 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -95,6 +96,7 @@ namespace Discrete
             this.button1.TabIndex = 3;
             this.button1.Text = "Analyze";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.analyze);
             // 
             // textBox1
             // 
@@ -102,10 +104,9 @@ namespace Discrete
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(48, 20);
             this.textBox1.TabIndex = 5;
-            this.textBox1.Text = "0";
             this.textBox1.Visible = false;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.textBox1.VisibleChanged += new System.EventHandler(this.insertZero);
+         
             // 
             // textBox2
             // 
@@ -113,7 +114,6 @@ namespace Discrete
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(48, 20);
             this.textBox2.TabIndex = 6;
-            this.textBox2.Text = "0";
             this.textBox2.Visible = false;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -123,7 +123,6 @@ namespace Discrete
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(48, 20);
             this.textBox3.TabIndex = 7;
-            this.textBox3.Text = "0";
             this.textBox3.Visible = false;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -133,7 +132,6 @@ namespace Discrete
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(48, 20);
             this.textBox4.TabIndex = 8;
-            this.textBox4.Text = "0";
             this.textBox4.Visible = false;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
@@ -143,7 +141,6 @@ namespace Discrete
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(48, 20);
             this.textBox5.TabIndex = 9;
-            this.textBox5.Text = "0";
             this.textBox5.Visible = false;
             this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
@@ -153,7 +150,6 @@ namespace Discrete
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(48, 20);
             this.textBox6.TabIndex = 14;
-            this.textBox6.Text = "0";
             this.textBox6.Visible = false;
             this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
@@ -163,7 +159,6 @@ namespace Discrete
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(48, 20);
             this.textBox7.TabIndex = 13;
-            this.textBox7.Text = "0";
             this.textBox7.Visible = false;
             this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
@@ -173,7 +168,6 @@ namespace Discrete
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(48, 20);
             this.textBox8.TabIndex = 12;
-            this.textBox8.Text = "0";
             this.textBox8.Visible = false;
             this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
@@ -183,7 +177,6 @@ namespace Discrete
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(48, 20);
             this.textBox9.TabIndex = 11;
-            this.textBox9.Text = "0";
             this.textBox9.Visible = false;
             this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
@@ -193,7 +186,6 @@ namespace Discrete
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(48, 20);
             this.textBox10.TabIndex = 10;
-            this.textBox10.Text = "0";
             this.textBox10.Visible = false;
             this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
@@ -203,7 +195,6 @@ namespace Discrete
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(48, 20);
             this.textBox11.TabIndex = 19;
-            this.textBox11.Text = "0";
             this.textBox11.Visible = false;
             this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
@@ -213,7 +204,6 @@ namespace Discrete
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(48, 20);
             this.textBox12.TabIndex = 18;
-            this.textBox12.Text = "0";
             this.textBox12.Visible = false;
             this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
             // 
@@ -223,7 +213,6 @@ namespace Discrete
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(48, 20);
             this.textBox13.TabIndex = 17;
-            this.textBox13.Text = "0";
             this.textBox13.Visible = false;
             this.textBox13.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
             // 
@@ -233,7 +222,6 @@ namespace Discrete
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(48, 20);
             this.textBox14.TabIndex = 16;
-            this.textBox14.Text = "0";
             this.textBox14.Visible = false;
             this.textBox14.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
             // 
@@ -243,7 +231,6 @@ namespace Discrete
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(48, 20);
             this.textBox15.TabIndex = 15;
-            this.textBox15.Text = "0";
             this.textBox15.Visible = false;
             this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
             // 
@@ -253,7 +240,6 @@ namespace Discrete
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(48, 20);
             this.textBox16.TabIndex = 24;
-            this.textBox16.Text = "0";
             this.textBox16.Visible = false;
             this.textBox16.TextChanged += new System.EventHandler(this.textBox16_TextChanged);
             // 
@@ -263,7 +249,6 @@ namespace Discrete
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(48, 20);
             this.textBox17.TabIndex = 23;
-            this.textBox17.Text = "0";
             this.textBox17.Visible = false;
             this.textBox17.TextChanged += new System.EventHandler(this.textBox17_TextChanged);
             // 
@@ -273,7 +258,6 @@ namespace Discrete
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(48, 20);
             this.textBox18.TabIndex = 22;
-            this.textBox18.Text = "0";
             this.textBox18.Visible = false;
             this.textBox18.TextChanged += new System.EventHandler(this.textBox18_TextChanged);
             // 
@@ -283,7 +267,6 @@ namespace Discrete
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(48, 20);
             this.textBox19.TabIndex = 21;
-            this.textBox19.Text = "0";
             this.textBox19.Visible = false;
             this.textBox19.TextChanged += new System.EventHandler(this.textBox19_TextChanged);
             // 
@@ -293,7 +276,6 @@ namespace Discrete
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(48, 20);
             this.textBox20.TabIndex = 20;
-            this.textBox20.Text = "0";
             this.textBox20.Visible = false;
             this.textBox20.TextChanged += new System.EventHandler(this.textBox20_TextChanged);
             // 
@@ -303,10 +285,9 @@ namespace Discrete
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(48, 20);
             this.textBox21.TabIndex = 29;
-            this.textBox21.Text = "0";
             this.textBox21.Visible = false;
             this.textBox21.TextChanged += new System.EventHandler(this.textBox21_TextChanged);
-            this.textBox21.VisibleChanged += new System.EventHandler(this.insertZero);
+          
             // 
             // textBox22
             // 
@@ -314,7 +295,6 @@ namespace Discrete
             this.textBox22.Name = "textBox22";
             this.textBox22.Size = new System.Drawing.Size(48, 20);
             this.textBox22.TabIndex = 28;
-            this.textBox22.Text = "0";
             this.textBox22.Visible = false;
             this.textBox22.TextChanged += new System.EventHandler(this.textBox22_TextChanged);
             // 
@@ -324,7 +304,6 @@ namespace Discrete
             this.textBox23.Name = "textBox23";
             this.textBox23.Size = new System.Drawing.Size(48, 20);
             this.textBox23.TabIndex = 27;
-            this.textBox23.Text = "0";
             this.textBox23.Visible = false;
             this.textBox23.TextChanged += new System.EventHandler(this.textBox23_TextChanged);
             // 
@@ -334,7 +313,6 @@ namespace Discrete
             this.textBox24.Name = "textBox24";
             this.textBox24.Size = new System.Drawing.Size(48, 20);
             this.textBox24.TabIndex = 26;
-            this.textBox24.Text = "0";
             this.textBox24.Visible = false;
             this.textBox24.TextChanged += new System.EventHandler(this.textBox24_TextChanged);
             // 
@@ -345,7 +323,6 @@ namespace Discrete
             this.textBox25.Name = "textBox25";
             this.textBox25.Size = new System.Drawing.Size(48, 20);
             this.textBox25.TabIndex = 25;
-            this.textBox25.Text = "0";
             this.textBox25.Visible = false;
             this.textBox25.TextChanged += new System.EventHandler(this.textBox25_TextChanged);
             // 
@@ -359,11 +336,23 @@ namespace Discrete
             this.label2.Text = "Enter your adjency matrix";
             this.label2.Visible = false;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(32, 283);
+            this.button2.Name = "button2";
+            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 31;
+            this.button2.Text = "Clear Matrix";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.clearMatrix);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(493, 357);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox21);
             this.Controls.Add(this.textBox22);
@@ -432,6 +421,7 @@ namespace Discrete
         private System.Windows.Forms.TextBox textBox24;
         private System.Windows.Forms.TextBox textBox25;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
     }
 }
 
