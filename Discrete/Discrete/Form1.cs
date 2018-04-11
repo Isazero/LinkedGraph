@@ -905,6 +905,7 @@ namespace Discrete
                 textBox26.Text = "";
             }
         }
+
         private void analyze(object sender, EventArgs e)
         {
             #region textBoxes
@@ -973,27 +974,49 @@ namespace Discrete
                     return;
                 }
             }
+
             // здесь писать логику проверки
+            bool isDegreesEqual = checkTheSumOfDegrees();
             if (matrix1.Length != matrix2.Length)
             {
                 MessageBox.Show("Vertices are not the equal");
-                
+
                 return;
             }
-            
-
+            else if (!isDegreesEqual)
+            {
+                MessageBox.Show("The sum of degrees are not equal");
+            }
         }
 
         public bool isNumber(string text)
         {
             var chArr = text.ToCharArray();
-            if (!chArr.Any(x => x > '0' && x < '9'))
+            if (!chArr.Any(x => x >= '0' && x <= '9'))
             {
                 return false;
             }
 
             return true;
         }
-    }
 
+        public bool checkTheSumOfDegrees()
+        {
+            int sumOfDegreesMatrix1 = 0;
+            foreach (var m1 in matrix1)
+            {
+                sumOfDegreesMatrix1 += m1;
+            }
+
+            int sumOfDegreesMatrix2 = 0;
+            foreach (var m2 in matrix2)
+            {
+                sumOfDegreesMatrix2 += m2;
+            }
+
+            bool isDegreesEqual = (sumOfDegreesMatrix2 == sumOfDegreesMatrix1);
+            return isDegreesEqual;
+        }
+    }
+        
 }
