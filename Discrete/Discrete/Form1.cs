@@ -980,13 +980,15 @@ namespace Discrete
             if (matrix1.Length != matrix2.Length)
             {
                 MessageBox.Show("Vertices are not the equal");
-
                 return;
             }
+            //допилить проверку degree для каждой вершины. Взаимоисключать жлементы с одинаковым degree. В конце делаем проверку
+            //если остались элементы пишем что не изоморфизм 
             else if (!isDegreesEqual)
             {
                 MessageBox.Show("The sum of degrees are not equal");
             }
+            //Добавить проверку матрицы из 4 пункта invariants
         }
 
         public bool isNumber(string text)
@@ -997,6 +999,7 @@ namespace Discrete
                 return false;
             }
 
+          
             return true;
         }
 
