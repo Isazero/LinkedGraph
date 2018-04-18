@@ -13,7 +13,6 @@ namespace Discrete
     public partial class Form1 : Form
     {
         public int[,] matrix1;
-        public int[,] matrix2;
 
         public Form1()
         {
@@ -33,115 +32,19 @@ namespace Discrete
 
         private void comboBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            int vertices = Convert.ToInt32(comboBox2.Text);
-            matrix1 = new int[vertices, vertices];
-            ShowAdjencyMatrix1(vertices);
-        }
-
-        private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            int vertices = Convert.ToInt32(comboBox1.Text);
-            matrix2 = new int[vertices, vertices];
-            ShowAdjencyMatrix2(vertices);
-        }
-
-        private void ShowAdjencyMatrix2(int vertices)
-        {
-            label4.Show();
-
-            #region textBoxes
-
-            var textBoxes = new[]
+            if (isNumber(comboBox2.Text) && Convert.ToInt32(comboBox2.Text) >= 2 &&
+                Convert.ToInt32(comboBox2.Text) <= 5)
             {
-                textBox26,
-                textBox27,
-                textBox28,
-                textBox29,
-                textBox30,
-                textBox31,
-                textBox32,
-                textBox33,
-                textBox34,
-                textBox35,
-                textBox36,
-                textBox37,
-                textBox38,
-                textBox39,
-                textBox40,
-                textBox41,
-                textBox42,
-                textBox43,
-                textBox44,
-                textBox45,
-                textBox46,
-                textBox47,
-                textBox48,
-                textBox49,
-                textBox50
-            };
-
-            #endregion
-
-            switch (vertices)
+                int vertices = Convert.ToInt32(comboBox2.Text);
+                matrix1 = new int[vertices, vertices];
+                ShowAdjencyMatrix1(vertices);
+            }
+            else
             {
-                case 2:
-                    foreach (var box in textBoxes)
-                    {
-                        if (box == textBox50 || box == textBox49
-                                             || box == textBox45 || box == textBox44)
-                        {
-                            box.Show();
-                        }
-                        else
-                        {
-                            box.Hide();
-                        }
-                    }
-
-                    break;
-                case 3:
-                    foreach (var box in textBoxes)
-                    {
-                        if (box == textBox50 || box == textBox49 || box == textBox48
-                            || box == textBox45 || box == textBox44 || box == textBox43
-                            || box == textBox40 || box == textBox39 || box == textBox38)
-                        {
-                            box.Show();
-                        }
-                        else
-                        {
-                            box.Hide();
-                        }
-                    }
-
-                    break;
-                case 4:
-                    foreach (var box in textBoxes)
-                    {
-                        if (box == textBox50 || box == textBox49 || box == textBox48 || box == textBox47
-                            || box == textBox45 || box == textBox44 || box == textBox43 || box == textBox42
-                            || box == textBox40 || box == textBox39 || box == textBox38 || box == textBox37
-                            || box == textBox35 || box == textBox34 || box == textBox33 || box == textBox32)
-                        {
-                            box.Show();
-                        }
-                        else
-                        {
-                            box.Hide();
-                        }
-                    }
-
-                    break;
-                case 5:
-                    foreach (var box
-                        in textBoxes)
-                    {
-                        box.Show();
-                    }
-
-                    break;
+                comboBox2.Text = "";
             }
         }
+
 
         private void ShowAdjencyMatrix1(int vertices)
         {
@@ -570,32 +473,7 @@ namespace Discrete
                 textBox22,
                 textBox23,
                 textBox24,
-                textBox25,
-                textBox26,
-                textBox27,
-                textBox28,
-                textBox29,
-                textBox30,
-                textBox31,
-                textBox32,
-                textBox33,
-                textBox34,
-                textBox35,
-                textBox36,
-                textBox37,
-                textBox38,
-                textBox39,
-                textBox40,
-                textBox41,
-                textBox42,
-                textBox43,
-                textBox44,
-                textBox45,
-                textBox46,
-                textBox47,
-                textBox48,
-                textBox49,
-                textBox50
+                textBox25
             };
 
             #endregion
@@ -606,306 +484,7 @@ namespace Discrete
             }
         }
 
-        private void textBox50_TextChanged(object sender, EventArgs e)
-        {
-            if (isNumber(textBox50.Text))
-            {
-                matrix2[0, 0] = Convert.ToInt32(textBox50.Text);
-            }
-            else
-            {
-                textBox50.Text = "";
-            }
-        }
-
-        private void textBox49_TextChanged(object sender, EventArgs e)
-        {
-            if (isNumber(textBox49.Text))
-            {
-                matrix2[0, 1] = Convert.ToInt32(textBox49.Text);
-            }
-            else
-            {
-                textBox49.Text = "";
-            }
-        }
-
-        private void textBox48_TextChanged(object sender, EventArgs e)
-        {
-            if (isNumber(textBox48.Text))
-            {
-                matrix2[0, 2] = Convert.ToInt32(textBox48.Text);
-            }
-            else
-            {
-                textBox48.Text = "";
-            }
-        }
-
-        private void textBox47_TextChanged(object sender, EventArgs e)
-        {
-            if (isNumber(textBox47.Text))
-            {
-                matrix2[0, 3] = Convert.ToInt32(textBox47.Text);
-            }
-            else
-            {
-                textBox47.Text = "";
-            }
-        }
-
-        private void textBox46_TextChanged(object sender, EventArgs e)
-        {
-            if (isNumber(textBox46.Text))
-            {
-                matrix2[0, 4] = Convert.ToInt32(textBox46.Text);
-            }
-            else
-            {
-                textBox46.Text = "";
-            }
-        }
-
-        private void textBox45_TextChanged(object sender, EventArgs e)
-        {
-            if (isNumber(textBox45.Text))
-            {
-                matrix2[1, 0] = Convert.ToInt32(textBox45.Text);
-            }
-            else
-            {
-                textBox45.Text = "";
-            }
-        }
-
-        private void textBox44_TextChanged(object sender, EventArgs e)
-        {
-            if (isNumber(textBox44.Text))
-            {
-                matrix2[1, 1] = Convert.ToInt32(textBox44.Text);
-            }
-            else
-            {
-                textBox44.Text = "";
-            }
-        }
-
-        private void textBox43_TextChanged(object sender, EventArgs e)
-        {
-            if (isNumber(textBox43.Text))
-            {
-                matrix2[1, 2] = Convert.ToInt32(textBox43.Text);
-            }
-            else
-            {
-                textBox43.Text = "";
-            }
-        }
-
-        private void textBox42_TextChanged(object sender, EventArgs e)
-        {
-            if (isNumber(textBox42.Text))
-            {
-                matrix2[1, 3] = Convert.ToInt32(textBox42.Text);
-            }
-            else
-            {
-                textBox42.Text = "";
-            }
-        }
-
-        private void textBox41_TextChanged(object sender, EventArgs e)
-        {
-            if (isNumber(textBox41.Text))
-            {
-                matrix2[1, 4] = Convert.ToInt32(textBox41.Text);
-            }
-            else
-            {
-                textBox41.Text = "";
-            }
-        }
-
-        private void textBox40_TextChanged(object sender, EventArgs e)
-        {
-            if (isNumber(textBox40.Text))
-            {
-                matrix2[2, 0] = Convert.ToInt32(textBox40.Text);
-            }
-            else
-            {
-                textBox40.Text = "";
-            }
-        }
-
-        private void textBox39_TextChanged(object sender, EventArgs e)
-        {
-            if (isNumber(textBox39.Text))
-            {
-                matrix2[2, 1] = Convert.ToInt32(textBox39.Text);
-            }
-            else
-            {
-                textBox39.Text = "";
-            }
-        }
-
-        private void textBox38_TextChanged(object sender, EventArgs e)
-        {
-            if (isNumber(textBox38.Text))
-            {
-                matrix2[2, 2] = Convert.ToInt32(textBox38.Text);
-            }
-            else
-            {
-                textBox38.Text = "";
-            }
-        }
-
-        private void textBox37_TextChanged(object sender, EventArgs e)
-        {
-            if (isNumber(textBox37.Text))
-            {
-                matrix2[2, 3] = Convert.ToInt32(textBox37.Text);
-            }
-            else
-            {
-                textBox37.Text = "";
-            }
-        }
-
-        private void textBox36_TextChanged(object sender, EventArgs e)
-        {
-            if (isNumber(textBox36.Text))
-            {
-                matrix2[2, 4] = Convert.ToInt32(textBox36.Text);
-            }
-            else
-            {
-                textBox36.Text = "";
-            }
-        }
-
-        private void textBox35_TextChanged(object sender, EventArgs e)
-        {
-            if (isNumber(textBox35.Text))
-            {
-                matrix2[3, 0] = Convert.ToInt32(textBox35.Text);
-            }
-            else
-            {
-                textBox35.Text = "";
-            }
-        }
-
-        private void textBox34_TextChanged(object sender, EventArgs e)
-        {
-            if (isNumber(textBox34.Text))
-            {
-                matrix2[3, 1] = Convert.ToInt32(textBox34.Text);
-            }
-            else
-            {
-                textBox34.Text = "";
-            }
-        }
-
-        private void textBox33_TextChanged(object sender, EventArgs e)
-        {
-            if (isNumber(textBox33.Text))
-            {
-                matrix2[3, 2] = Convert.ToInt32(textBox33.Text);
-            }
-            else
-            {
-                textBox33.Text = "";
-            }
-        }
-
-        private void textBox32_TextChanged(object sender, EventArgs e)
-        {
-            if (isNumber(textBox32.Text))
-            {
-                matrix2[3, 3] = Convert.ToInt32(textBox32.Text);
-            }
-            else
-            {
-                textBox32.Text = "";
-            }
-        }
-
-        private void textBox31_TextChanged(object sender, EventArgs e)
-        {
-            if (isNumber(textBox31.Text))
-            {
-                matrix2[3, 4] = Convert.ToInt32(textBox31.Text);
-            }
-            else
-            {
-                textBox31.Text = "";
-            }
-        }
-
-        private void textBox30_TextChanged(object sender, EventArgs e)
-        {
-            if (isNumber(textBox30.Text))
-            {
-                matrix2[4, 0] = Convert.ToInt32(textBox30.Text);
-            }
-            else
-            {
-                textBox30.Text = "";
-            }
-        }
-
-        private void textBox29_TextChanged(object sender, EventArgs e)
-        {
-            if (isNumber(textBox29.Text))
-            {
-                matrix2[4, 1] = Convert.ToInt32(textBox29.Text);
-            }
-            else
-            {
-                textBox29.Text = "";
-            }
-        }
-
-        private void textBox28_TextChanged(object sender, EventArgs e)
-        {
-            if (isNumber(textBox28.Text))
-            {
-                matrix2[4, 2] = Convert.ToInt32(textBox28.Text);
-            }
-            else
-            {
-                textBox28.Text = "";
-            }
-        }
-
-        private void textBox27_TextChanged(object sender, EventArgs e)
-        {
-            if (isNumber(textBox27.Text))
-            {
-                matrix2[4, 3] = Convert.ToInt32(textBox27.Text);
-            }
-            else
-            {
-                textBox27.Text = "";
-            }
-        }
-
-        private void textBox26_TextChanged(object sender, EventArgs e)
-        {
-            if (isNumber(textBox26.Text))
-            {
-                matrix2[4, 4] = Convert.ToInt32(textBox26.Text);
-            }
-            else
-            {
-                textBox26.Text = "";
-            }
-        }
-
+       
         private void analyze(object sender, EventArgs e)
         {
             #region textBoxes
@@ -936,32 +515,7 @@ namespace Discrete
                 textBox22,
                 textBox23,
                 textBox24,
-                textBox25,
-                textBox26,
-                textBox27,
-                textBox28,
-                textBox29,
-                textBox30,
-                textBox31,
-                textBox32,
-                textBox33,
-                textBox34,
-                textBox35,
-                textBox36,
-                textBox37,
-                textBox38,
-                textBox39,
-                textBox40,
-                textBox41,
-                textBox42,
-                textBox43,
-                textBox44,
-                textBox45,
-                textBox46,
-                textBox47,
-                textBox48,
-                textBox49,
-                textBox50
+                textBox25
             };
 
             #endregion
@@ -976,19 +530,7 @@ namespace Discrete
             }
 
             // здесь писать логику проверки
-            bool isDegreesEqual = checkTheSumOfDegrees();
-            if (matrix1.Length != matrix2.Length)
-            {
-                MessageBox.Show("Vertices are not the equal");
-                return;
-            }
-            //допилить проверку degree для каждой вершины. Взаимоисключать жлементы с одинаковым degree. В конце делаем проверку
-            //если остались элементы пишем что не изоморфизм 
-            else if (!isDegreesEqual)
-            {
-                MessageBox.Show("The sum of degrees are not equal");
-            }
-            //Добавить проверку матрицы из 4 пункта invariants
+           
         }
 
         public bool isNumber(string text)
@@ -1002,24 +544,7 @@ namespace Discrete
           
             return true;
         }
-
-        public bool checkTheSumOfDegrees()
-        {
-            int sumOfDegreesMatrix1 = 0;
-            foreach (var m1 in matrix1)
-            {
-                sumOfDegreesMatrix1 += m1;
-            }
-
-            int sumOfDegreesMatrix2 = 0;
-            foreach (var m2 in matrix2)
-            {
-                sumOfDegreesMatrix2 += m2;
-            }
-
-            bool isDegreesEqual = (sumOfDegreesMatrix2 == sumOfDegreesMatrix1);
-            return isDegreesEqual;
-        }
+        
     }
         
 }
