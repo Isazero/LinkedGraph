@@ -12,6 +12,7 @@ namespace Discrete
 {
     public partial class Form1 : Form
     {
+        public int vertices;
         public int[,] matrix1;
 
         public Form1()
@@ -35,7 +36,7 @@ namespace Discrete
             if (isNumber(comboBox2.Text) && Convert.ToInt32(comboBox2.Text) >= 2 &&
                 Convert.ToInt32(comboBox2.Text) <= 5)
             {
-                int vertices = Convert.ToInt32(comboBox2.Text);
+                 vertices = Convert.ToInt32(comboBox2.Text);
                 matrix1 = new int[vertices, vertices];
                 ShowAdjencyMatrix1(vertices);
             }
@@ -519,7 +520,8 @@ namespace Discrete
             };
 
             #endregion
-
+            int[] check = new int[vertices];
+            Queue<int> queue = new Queue<int>();
             foreach (var box in textBoxes)
             {
                 if (box.Visible && box.Text.Equals(""))
@@ -529,8 +531,38 @@ namespace Discrete
                 }
             }
 
+            check[0] = 1;
+            queue.Enqueue(0);
+            while (queue.Count != 0)
+            {
+                int i = queue.Dequeue();
+                for (int j = 0; j < vertices; j++)
+                {
+                    if (matrix1[i, j] != 0)
+                    {
+                        if (check[j] != 0) {
+                            continue;
+                        }
+                        check[j] = 1;
+                        queue.Enqueue(j);
+                    }
+                }
+            }
+
+            foreach (int k in check)
+            {
+                if (k == 0)
+                {
+                    MessageBox.Show("The Graph is not Connected");
+                    return;
+                }
+            }
+
+            MessageBox.Show("The Graph is Connected");
+            return;
+
             // здесь писать логику проверки
-           
+
         }
 
         public bool isNumber(string text)

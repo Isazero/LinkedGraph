@@ -18,3 +18,13 @@ C:\Discrete\LinkedGraph\Discrete\Discrete\obj\Debug\Discrete.csproj.GenerateReso
 C:\Discrete\LinkedGraph\Discrete\Discrete\obj\Debug\Discrete.csproj.CoreCompileInputs.cache
 C:\Discrete\LinkedGraph\Discrete\Discrete\obj\Debug\Discrete.exe
 C:\Discrete\LinkedGraph\Discrete\Discrete\obj\Debug\Discrete.pdb
+D:\Projects\LinkedGraph\Discrete\Discrete\bin\Debug\Discrete.exe.config
+D:\Projects\LinkedGraph\Discrete\Discrete\bin\Debug\Discrete.exe
+D:\Projects\LinkedGraph\Discrete\Discrete\bin\Debug\Discrete.pdb
+D:\Projects\LinkedGraph\Discrete\Discrete\obj\Debug\Discrete.csprojResolveAssemblyReference.cache
+D:\Projects\LinkedGraph\Discrete\Discrete\obj\Debug\Discrete.Form1.resources
+D:\Projects\LinkedGraph\Discrete\Discrete\obj\Debug\Discrete.Properties.Resources.resources
+D:\Projects\LinkedGraph\Discrete\Discrete\obj\Debug\Discrete.csproj.GenerateResource.cache
+D:\Projects\LinkedGraph\Discrete\Discrete\obj\Debug\Discrete.csproj.CoreCompileInputs.cache
+D:\Projects\LinkedGraph\Discrete\Discrete\obj\Debug\Discrete.exe
+D:\Projects\LinkedGraph\Discrete\Discrete\obj\Debug\Discrete.pdb
