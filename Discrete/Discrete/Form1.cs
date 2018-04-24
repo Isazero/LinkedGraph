@@ -13,6 +13,7 @@ namespace Discrete
     public partial class Form1 : Form
     {
         public int[,] matrix1;
+        public bool isDirected = false;
 
         public Form1()
         {
@@ -539,12 +540,14 @@ namespace Discrete
             if (!chArr.Any(x => x >= '0' && x <= '9'))
             {
                 return false;
-            }
-
-          
+            }          
             return true;
         }
-        
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            isDirected = checkBox1.Checked;
+        }
     }
         
 }

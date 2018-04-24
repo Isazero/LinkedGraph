@@ -61,6 +61,7 @@ namespace Discrete
             this.textBox25 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -345,11 +346,23 @@ namespace Discrete
             this.label5.Text = "Enter first adjency matrix";
             this.label5.Visible = false;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(237, 8);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(66, 17);
+            this.checkBox1.TabIndex = 61;
+            this.checkBox1.Text = "Directed";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(345, 357);
+            this.ClientSize = new System.Drawing.Size(461, 357);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox21);
@@ -420,6 +433,7 @@ namespace Discrete
         private System.Windows.Forms.TextBox textBox25;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 
