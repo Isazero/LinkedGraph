@@ -532,33 +532,109 @@ namespace Discrete
                 }
             }
 
-            check[0] = 1;
-            queue.Enqueue(0);
-            while (queue.Count != 0)
+            if (isDirected)
             {
-                int i = queue.Dequeue();
-                for (int j = 0; j < vertices; j++)
+                int[,] copyMatrix = new int[vertices, vertices];
+                for (int i = 0; i < vertices; i++)
                 {
-                    if (matrix1[i, j] != 0)
+                    for (int j = 0; j < vertices; j++)
                     {
-                        if (check[j] != 0) {
-                            continue;
+                        if (matrix1[i, j] != 0)
+                        {
+                            copyMatrix[i, j] = 1;
+                            copyMatrix[j, i] = copyMatrix[i, j];
                         }
-                        check[j] = 1;
-                        queue.Enqueue(j);
+                        
                     }
                 }
-            }
+                check[0] = 1;
+                queue.Enqueue(0);
+                while (queue.Count != 0)
+                {
+                    int i = queue.Dequeue();
+                    for (int j = 0; j < vertices; j++)
+                    {
+                        if (copyMatrix[i, j] != 0)
+                        {
+                            if (check[j] != 0)
+                            {
+                                continue;
+                            }
+                            check[j] = 1;
+                            queue.Enqueue(j);
+                        }
+                    }
+                }
+                bool result = check.Any(x => x == 0);
+                if (result)
+                {
+                    MessageBox.Show("The Graph is not Connected");
+                    return;
+                }
+                
+                for (int k = 0; k < vertices; k++)
+                {
+                    int[] check1 = new int[vertices];
+                    check1[k] = 1;
+                    queue.Enqueue(k);
+                    while (queue.Count != 0)
+                    {
+                        int i = queue.Dequeue();
+                        for (int j = 0; j < vertices; j++)
+                        {
+                            if (matrix1[i, j] != 0)
+                            {
+                                if (check1[j] != 0)
+                                {
+                                    continue;
+                                }
+                                check1[j] = 1;
+                                queue.Enqueue(j);
+                            }
+                        }
+                    }
+                    
+                    bool result1 = check1.Any(x => x == 0);
+                    if (result1)
+                    {
+                        MessageBox.Show("The Graph is weakly Connected");
+                        return;
+                    }
+                    MessageBox.Show("Line checked");
+                }
+                
+                {
+                    MessageBox.Show("The Graph is strongly Connected");
+                    return;
+                }
 
-            foreach (int k in check)
+            }
+            else
             {
-                if (k == 0)
+                check[0] = 1;
+                queue.Enqueue(0);
+                while (queue.Count != 0)
+                {
+                    int i = queue.Dequeue();
+                    for (int j = 0; j < vertices; j++)
+                    {
+                        if (matrix1[i, j] != 0)
+                        {
+                            if (check[j] != 0) {
+                                continue;
+                            }
+                            check[j] = 1;
+                            queue.Enqueue(j);
+                        }
+                    }
+                }
+                bool result = check.Any(x => x == 0);
+                if (result)
                 {
                     MessageBox.Show("The Graph is not Connected");
                     return;
                 }
             }
-
             MessageBox.Show("The Graph is Connected");
             return;
 
